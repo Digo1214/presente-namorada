@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surpresa Especial</title>
+    <style>
+      body {
+        background: radial-gradient(circle, #ff6699, #ff3366);
+        text-align: center;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+      }
+      h1 {
+        color: white;
+        font-size: 3em;
+        animation: pulsar 1.5s infinite alternate;
+      }
+      .bouquet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 400px;
+        position: relative;
+      }
+      .flower {
+        font-size: 4em;
+        opacity: 0;
+        animation: montarFlor 2s forwards ease-in-out;
+      }
+      .flower:nth-child(1) {
+        animation-delay: 0.5s;
+      }
+      .flower:nth-child(2) {
+        animation-delay: 1s;
+      }
+      .flower:nth-child(3) {
+        animation-delay: 1.5s;
+      }
+      .flower:nth-child(4) {
+        animation-delay: 2s;
+      }
+      .flower:nth-child(5) {
+        animation-delay: 2.5s;
+      }
+      .flower:nth-child(6) {
+        animation-delay: 3s;
+      }
+      .flower:nth-child(7) {
+        animation-delay: 3.5s;
+      }
+      .flower:nth-child(8) {
+        animation-delay: 4s;
+      }
+      @keyframes montarFlor {
+        from {
+          opacity: 0;
+          transform: scale(0.5) rotate(-30deg);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1) rotate(0deg);
+        }
+      }
+      .heart-effect {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.6),
+          transparent
+        );
+        border-radius: 50%;
+        animation: piscar 2s infinite alternate ease-in-out;
+      }
+      .heart-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 180px;
+        transform: translate(-50%, -50%);
+      }
+      .heart-effect:nth-child(1) {
+        top: 0;
+        left: 25%;
+        animation-delay: 0.3s;
+      }
+      .heart-effect:nth-child(2) {
+        top: 0;
+        right: 25%;
+        animation-delay: 0.6s;
+      }
+      .heart-effect:nth-child(3) {
+        bottom: 0;
+        left: 15%;
+        animation-delay: 0.9s;
+      }
+      .heart-effect:nth-child(4) {
+        bottom: 0;
+        right: 15%;
+        animation-delay: 1.2s;
+      }
+      @keyframes piscar {
+        from {
+          opacity: 0.3;
+          transform: scale(1);
+        }
+        to {
+          opacity: 0.8;
+          transform: scale(1.2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Eu te amo, princesa! ❤️</h1>
+
+    <div class="bouquet">
+      <div class="flower">🌹</div>
+      <div class="flower">🌹</div>
+      <div class="flower">🌹</div>
+      <div class="flower">🌹</div>
+      <div class="flower">🌹</div>
+      <div class="flower">🌹</div>
+      <div class="flower">🌹</div>
+      <div class="flower">🌹</div>
+    </div>
+
+    <div class="heart-container">
+      <div class="heart-effect"></div>
+      <div class="heart-effect"></div>
+      <div class="heart-effect"></div>
+      <div class="heart-effect"></div>
+    </div>
+  </body>
+</html>

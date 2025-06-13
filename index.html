@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feliz Dia dos Namorados</title>
+    <style>
+      body {
+        background: radial-gradient(circle, #ffcccb, #ff1493);
+        text-align: center;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+        position: relative;
+      }
+      h1 {
+        color: white;
+        font-size: 3em;
+        animation: pulsar 1.5s infinite alternate;
+      }
+      p {
+        font-size: 1.5em;
+        color: white;
+      }
+      .surpresa {
+        background-color: white;
+        border: none;
+        padding: 15px;
+        font-size: 1.2em;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-top: 20px;
+        display: block;
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Feliz Dia dos Namorados, Anna Catarina! ❤️</h1>
+    <p>Rodrigo preparou esta surpresa especial para você!</p>
+
+    <button class="surpresa" onclick="mostrarMensagem(1)">
+      Clique para começar...
+    </button>
+    <div
+      id="mensagem1"
+      style="display: none; font-size: 1.8em; color: white; margin-top: 20px"
+    >
+      🌹 Você sabia que hoje é um dia especial?
+    </div>
+
+    <button class="surpresa" onclick="mostrarMensagem(2)" style="display: none">
+      Continue...
+    </button>
+    <div
+      id="mensagem2"
+      style="display: none; font-size: 1.8em; color: white; margin-top: 20px"
+    >
+      💖 Porque tem alguém muito especial para mim... e é você, Minha Princesa!
+    </div>
+
+    <button class="surpresa" onclick="mostrarMensagem(3)" style="display: none">
+      Última etapa!
+    </button>
+    <div
+      id="mensagem3"
+      style="display: none; font-size: 1.8em; color: white; margin-top: 20px"
+    >
+      🎁 Agora sim, o presente verdadeiro: Você é a razão do meu sorriso todos
+      os dias! Te amo! 💕
+    </div>
+
+    <button
+      class="surpresa"
+      onclick="redirecionarPagina()"
+      style="display: none"
+    >
+      Clique aqui para seu presente final!
+    </button>
+
+    <script>
+      function mostrarMensagem(etapa) {
+        document.getElementById(`mensagem${etapa}`).style.display = "block";
+
+        if (etapa < 3) {
+          document.querySelectorAll(".surpresa")[etapa].style.display = "block";
+        } else {
+          document.querySelectorAll(".surpresa")[etapa].style.display = "block";
+        }
+      }
+
+      function redirecionarPagina() {
+        window.location.href = "surpresa.html";
+      }
+    </script>
+  </body>
+</html>
